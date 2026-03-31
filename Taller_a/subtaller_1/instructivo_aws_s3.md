@@ -106,6 +106,8 @@ Crear una cuenta de AWS, activar la capa gratuita (Free Tier) y realizar operaci
 3. Arrastra un archivo de prueba (ej: un `.txt` o `.csv`).
 4. Haz clic en **"Upload"** (parte inferior).
 5. Verás el archivo listado en el bucket con su nombre, tamaño y fecha.
+<img width="1882" height="779" alt="Captura de pantalla 2026-03-31 100733" src="https://github.com/user-attachments/assets/fd69e167-db88-455e-819d-39181f2c25d8" />
+
 
 ### Paso 13 — Organizar con "carpetas" (prefijos)
 En S3 no existen carpetas reales, pero se usan prefijos para organizar:
@@ -115,16 +117,24 @@ En S3 no existen carpetas reales, pero se usan prefijos para organizar:
 3. Repite para crear: `processed/` y `output/`
 4. Sube archivos dentro de cada "carpeta" usando la misma interfaz de upload.
 
+   <img width="1887" height="524" alt="Captura de pantalla 2026-03-31 101258" src="https://github.com/user-attachments/assets/6975d358-ed48-4ef2-a339-09dcbbe75277" />
+
+
 ### Paso 14 — Descargar un archivo desde S3
 1. Haz clic en el archivo dentro del bucket.
 2. Haz clic en **"Download"** (esquina superior derecha del detalle del objeto).
 
+   <img width="1889" height="818" alt="Captura de pantalla 2026-03-31 101334" src="https://github.com/user-attachments/assets/fb08075c-bb79-476e-a9ff-63801c955e9c" />
+
 ### Paso 15 — Hacer un objeto públicamente accesible (opcional)
 > Solo hazlo con archivos que quieras compartir públicamente.
+
 
 1. Ve a tu bucket > **"Permissions"** > desactiva **"Block all public access"** (confirma).
 2. Selecciona el archivo > **"Actions"** > **"Make public via ACL"**.
 3. Copia la URL del objeto para compartirlo.
+
+
 
 ### Paso 16 — Generar una URL pre-firmada (acceso temporal)
 1. Selecciona el archivo.
@@ -132,12 +142,22 @@ En S3 no existen carpetas reales, pero se usan prefijos para organizar:
 3. Define el tiempo de expiración (ej: 1 hora).
 4. Copia y comparte la URL — expirará automáticamente.
 
+<img width="785" height="776" alt="Captura de pantalla 2026-03-31 101412" src="https://github.com/user-attachments/assets/a4e204a2-0c20-46bd-96cf-4abdd3a9c7cb" />
+
+   
+https://mi-bucket-lab-20263-piedrahita.s3.us-east-2.amazonaws.com/mascotas.csv?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHcaCXVzLWVhc3QtMiJHMEUCIQDcxMuLz3JuVWofIiluDl5Cf62ojmkhGc%2Bx0qs53krQ5QIgFc%2BnkMJUjkMm6%2FbL%2F9zh2UjP%2FVjuDLkabFqDTSggSqMquQMIQBAAGgwyMjQ4NTAxNDAzNzEiDGJRa%2FD85Zdm3eRMOSqWA%2F9dQvAwB%2FJfopQ1QvMvp1pTfeLNI4hYNv%2FFKiiTWNlilZNTsRkQGb59k9aS1h%2BD2X80tzeYoneznW6TlRcysgh4uIz5BdVCPayQg3xfWWdkNEwc1RrB7BaaQwdLz1QF%2FrKNEEqgQl%2FtfbaNDEZEBgteO4XcK9HHkzgNIgFhUZb6JaxzSUEMH0an2jJ%2B0Pk7z2LkJSR8q%2Fl9yY%2Bw9XEI3226Lw6UNURx00SOXsU69xgkx7ed8iPzD4Q8YDf5haBfxVpKEcOVyheenwdxSHT8k2DDj4ReTBO3h5oSS%2BOj7mI16Ynv2e%2BqvOBZ5XV4hcyc%2Fkhmkqc0MuQ%2Fc2jyXUJG0VAjpBCWZvS0R6MF%2FO%2Fx23nZdkIqRbb3IsC6up0%2BLwHVTuCdZLVWuoSnnD2jbi0WGuzgqlCH065OfWTFrAfRvy7slsg7cUngjI%2F8ViYSAEFTLiX54pL7v5KC0xfmLrfrP8sPlJqa9MTZeZANxhYZyDzc85QRB0IehiRpkyjqYzSfPQygfujueoulabFS29b3xzMRuFJkEkIwzL2vzgY63gLOXlgITAxdwdrNHeVcDl9KGqVEb9wT89%2B%2FVjX6NtAaXRDjaPrCz3acTDnjQ%2BRQi550aTTbrjL9lxwctwhc0iQ%2FJaw3%2BY5qTr%2BLJIFrCLcDf6L8Cj6YQyw4Yrv2dIQf8G6oU0wVbCVZiICz%2B3ZgOhuaJiqurc1BxniaAhM2ynmXiWoPmMJ2yKpSoUQwULXTVpIMSM1leVFtDls9KzwZygsJjR263F9DEX0ygwpDzZhmxRa0WCfcWZ0f1XS85GinuZt99wg87sSyyN4MzKNjmOTAxlaoztCfNYxLzkAgix3NgpgFAYmERjNBkrz2nflgqAtqG%2F%2Fbx%2B5heXS2z21KV9dOqqe4YAlmFOBmg4o61q8wJAW9q5fjBhinwjm3SBWCIOl91zbdeee9pou2GW8PvVqg9BzR807GC26Eu5EHpIO6nBubuGRfCCEaxgw4fRbyh1xiP6m2GfTrLF%2BzOFMfzg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATIWQ43TJY64WAT6D%2F20260331%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20260331T151414Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=18a94dc6c87f6f1aef558f39132ea85f06a63059df32565a539e7677652b91ad
+
 ### Paso 17 — Eliminar objetos y el bucket
 > Para evitar costos inesperados, elimina recursos que no uses.
 
 1. Selecciona todos los objetos > **"Delete"** > escribe `permanently delete` > confirma.
 2. Regresa a la lista de buckets.
 3. Selecciona el bucket > **"Delete"** > escribe el nombre del bucket > confirma.
+
+<img width="1870" height="340" alt="image" src="https://github.com/user-attachments/assets/82a85e5a-0375-4958-825e-9ebf626d8ea7" />
+
+<img width="1901" height="488" alt="image" src="https://github.com/user-attachments/assets/6ed48082-4003-4f69-8438-500d2a0472e7" />
+
 
 ---
 
@@ -152,10 +172,14 @@ brew install awscli
 aws --version
 ```
 
+<img width="1224" height="55" alt="image" src="https://github.com/user-attachments/assets/a11d74ed-592e-4983-a65d-7ad67bf2e6d7" />
+
 ### Paso 19 — Configurar credenciales
 1. En IAM, ve a tu usuario `lab-user` > **"Security credentials"** > **"Create access key"**.
 2. Selecciona **"Command Line Interface (CLI)"** > acepta la advertencia > **"Next"** > **"Create access key"**.
 3. Descarga el `.csv` con **Access Key ID** y **Secret Access Key**.
+   
+<img width="1503" height="450" alt="image" src="https://github.com/user-attachments/assets/4bc2aaea-eeec-4a32-9cf7-faddb2e79a22" />
 
 ```bash
 aws configure
@@ -191,6 +215,7 @@ aws s3 rm s3://mi-bucket-cli-lab/raw/archivo_local.csv
 # Eliminar bucket (debe estar vacío)
 aws s3 rb s3://mi-bucket-cli-lab
 ```
+<img width="1897" height="968" alt="image" src="https://github.com/user-attachments/assets/586e93ac-014a-42a9-9816-c6dc4a115245" />
 
 ---
 
@@ -201,10 +226,12 @@ aws s3 rb s3://mi-bucket-cli-lab
 2. Haz clic en **"Budgets"** > **"Create budget"**.
 3. Tipo: **"Zero spend budget"** — te avisa si hay cualquier gasto.
 4. Ingresa tu correo y crea el presupuesto.
+<img width="1523" height="137" alt="image" src="https://github.com/user-attachments/assets/4cad1d22-c345-493d-9aee-ba4f0d4ff0a8" />
 
 ### Paso 22 — Revisar uso del Free Tier
 1. Ve a **"Billing"** > **"Free Tier"**.
 2. Verás el consumo actual vs. el límite para cada servicio.
+<img width="1517" height="465" alt="image" src="https://github.com/user-attachments/assets/6d84d7b4-3755-4fa8-beef-79376246903a" />
 
 ---
 

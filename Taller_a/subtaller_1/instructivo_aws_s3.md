@@ -176,6 +176,9 @@ aws s3 mb s3://mi-bucket-cli-lab
 # Subir archivo
 aws s3 cp archivo_local.csv s3://mi-bucket-cli-lab/raw/archivo_local.csv
 
+<img width="1882" height="779" alt="image" src="https://github.com/user-attachments/assets/7e08aba1-8b8e-4c4a-a347-f9b86ce1b87e" />
+
+
 # Listar contenido del bucket
 aws s3 ls s3://mi-bucket-cli-lab/
 
